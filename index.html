@@ -9,6 +9,15 @@
         .report-card { transition: transform 0.2s; }
         .report-card:hover { transform: translateY(-2px); }
     </style>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "60aa6243-7951-41c8-b79a-567a013cad96",
+    });
+  });
+</script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
