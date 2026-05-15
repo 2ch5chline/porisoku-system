@@ -1,6 +1,6 @@
 {
   "name": "ポリ速！web",
-  "short_name": "ポリ速!",
+  "short_name": "ポリ速！",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
