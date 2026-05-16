@@ -81,40 +81,45 @@
         setInterval(fetchReports, 60000);
     </script>
 }
-  </style>
+  <style>
   /* 投稿ボタンのスタイル */
+.post-button {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background-color: #ef4444; /* 強めの赤（ポリ色） */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.post-button:active {
+  transform: scale(0.95);
+  background-color: #dc2626;
+}
+
+.plus-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+/* iPhoneの「ホーム画面に追加」した際の安全地帯を確保 */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
   .post-button {
-    position: fixed;
-    bottom: 30px;
-    right: 20px;
-    background-color: #ef4444; /* 強めの赤（ポリ色） */
-    color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1000;
-    transition: transform 0.2s, background-color 0.2s;
+    bottom: calc(30px + env(safe-area-inset-bottom));
   }
-
-  .post-button:active {
-    transform: scale(0.95);
-    background-color: #dc2626;
-  }
-
-  .plus-icon {
-    font-size: 24px;
-    margin-right: 8px;
-  }
-
-  @supports (padding-bottom: env(safe-area-inset-bottom)) {
-    .post-button {
-      bottom: calc(30px + env(safe-area-inset-bottom));
-    }
-  }
+}
   </style>
+  <a href="https://forms.gle/xVXub4jvQdgkCLAY8" target="_blank" class="post-button">
+  <span class="plus-icon">＋</span>
+  <span class="button-text">報告する</span>
+</a>
 </body>
 </html>
