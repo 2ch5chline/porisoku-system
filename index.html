@@ -63,10 +63,11 @@
                             <span class="text-xs text-gray-400">${item['タイムスタンプ'] || ''}</span>
                         </div>
                         <p class="mt-2 text-sm spaece-y-1">
-                        <p><strong>ポリった理由</strong> ${item['ポリった理由'] || '理由未記入'}</p>
-                        <p><strong>入っているオプチャ</strong> ${item['入っているオプチャを選択'] || '理由未記入'}</p>
-                        <p><strong>ポリ解予定日</strong> ${item['ポリ解除の予定日を入力'] || '予定日不明'}</p>
-                        <p><strong>メッセージ</strong> ${item['メッセージ'] || 'メッセージ未記入'}</p>
+                        <p><strong>ポリった理由:</strong> ${item['ポリった理由'] || '理由未記入'}</p>
+                        <p><strong>入っているオプチャ:</strong> ${item['入っているオプチャを選択'] || '理由未記入'}</p>
+                        <p><strong>ポリ期間:</strong> ${item['ポリ期間']}</p>
+                        <p><strong>ポリ解予定日:</strong> ${item['ポリ解除の予定日を入力'] || '予定日不明'}</p>
+                        <p><strong>メッセージ:</strong> ${item['メッセージ'] || 'メッセージ未記入'}</p>
                     `;
                     listContainer.appendChild(card);
                 });
