@@ -21,6 +21,8 @@
   OneSignalDeferred.push(async function(OneSignal) {
     await OneSignal.init({
       appId: "60aa6243-7951-41c8-b79a-567a013cad96",
+      serviceWorkerParam: { scope: "/porisoku-system/" }, 
+      serviceWorkerPath: "OneSignalSDKWorker.js" 
     });
   });
 </script>
@@ -108,13 +110,6 @@
   font-size: 24px;
   margin-right: 8px;
 }
-
-oneSignal.init({
-    appId: "あなたのAppID",
-    // 以下の2行を追加
-    serviceWorkerParam: { scope: "/porisoku-system/" }, 
-    serviceWorkerPath: "OneSignalSDKWorker.js" 
-});
     
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .post-button {
