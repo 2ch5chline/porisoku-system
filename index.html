@@ -109,7 +109,13 @@
   margin-right: 8px;
 }
 
-/* iPhoneの「ホーム画面に追加」した際の安全地帯を確保 */
+oneSignal.init({
+    appId: "あなたのAppID",
+    // 以下の2行を追加
+    serviceWorkerParam: { scope: "/porisoku-system/" }, 
+    serviceWorkerPath: "OneSignalSDKWorker.js" 
+});
+    
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .post-button {
     bottom: calc(30px + env(safe-area-inset-bottom));
