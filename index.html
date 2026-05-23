@@ -66,9 +66,10 @@
                         </div>
                         <p class="mt-2 text-sm spaece-y-1">
                         <p><strong>ポリった理由:</strong> ${item['ポリった理由'] || '理由未記入'}</p>
-                        <p><strong>入っているオプチャ:</strong> ${item['入っているオプチャを選択'] || '未記入'}</p>
+                        <p><strong>入っているオプチャ:</strong> ${item['入っているオプチャを選択 (series 2ch・5ch)'] || '未記入'}</p>
                         <p><strong>入っているオプチャ:</strong> ${item['入っているオプチャを入力'] || '未記入'}</p>
-                        <p><strong>ポリ期間:</strong> ${item['ポリ期間']}</p>
+                        <p><strong>ポリ期間:</strong> ${item['ポリ期間'] || '未記入'}</p>
+                        <p><strong>ポリ対象:</strong> ${item['ポリの対象'] || '未記入'}</p>
                         <p><strong>ポリ解予定日:</strong> ${item['ポリ解除の予定日を入力'] || '予定日不明'}</p>
                         <p><strong>メッセージ:</strong> ${item['メッセージ'] || 'メッセージ未記入'}</p>
                     `;
@@ -89,7 +90,7 @@
   position: fixed;
   bottom: 30px;
   right: 20px;
-  background-color: #ef4444; /* 強めの赤（ポリ色） */
+  background-color: #ef4444; 
   color: white;
   padding: 12px 24px;
   border-radius: 50px;
