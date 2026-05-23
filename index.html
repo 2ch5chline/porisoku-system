@@ -19,10 +19,15 @@
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
+    OneSignal.init({
       appId: "60aa6243-7951-41c8-b79a-567a013cad96",
-      serviceWorkerParam: { scope: "/porisoku-system/" }, 
       serviceWorkerPath: "OneSignalSDKWorker.js" 
+      serviceWorkerParam: { scope: "/porisoku-system/" }, 
+
+      allowLocalhostAsSecureOrigin: true,
+      notifyButton: {
+          enable: true,
+      };
     });
   });
 </script>
