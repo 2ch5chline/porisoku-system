@@ -18,15 +18,24 @@
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    OneSignal.init({
-      appId: "60aa6243-7951-41c8-b79a-567a013cad96",
-      serviceWorkerPath: "OneSignalSDKWorker.js" ,
-      serviceWorkerParam: { scope: "/porisoku-system/" }, 
+<script defer src="https://www.pushcode.jp/dist/js/pushcode.js"></script>
+<script>
+window.PushCodeInit = function() {
+  try {
+    if (PushCode && PushCode.isSupport()) {
+      PushCode.init({ domainToken: '3abc8bdae4045c83ef15e09d1722077eca9c4a370ac498d09f8f9d49f0f723e4', userid: '' });
+      PushCode.components.openSubscribeDialog();
+    }
+  }
+  catch (err) {
+    console.error(err);
+    if (PushCode) {
+      PushCode.sendError(err);
+    }
+  }
+};
+</script>
 
-      allowLocalhostAsSecureOrigin: true,
-      notifyButton: {
-          enable: true,
       }
     });
   });
