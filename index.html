@@ -14,7 +14,23 @@
     <style>
         .report-card { transition: transform 0.2s; }
         .report-card:hover { transform: translateY(-2px); }
-    </style>
+        .menu-list {
+         display: flex;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         background-color: #333;
+       }
+        .menu-list li a {
+         display: block;
+         padding: 15px 20px;
+         color: #fff;
+         text-decoration: none;
+       }
+        .menu-list li a:hover {
+        background-color: #555;
+       }
+     </style>
 
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 
@@ -36,7 +52,6 @@
 </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
     <nav class="bg-green-600 text-white p-4 shadow-lg">
         <div class="container mx-auto font-bold space-x-6">
           <div class="text-xl">ポリ速！web</div>
